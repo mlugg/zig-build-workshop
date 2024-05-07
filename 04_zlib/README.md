@@ -3,7 +3,7 @@
 Now that we've covered the basics, it's time for something a little more realistic.
 
 Your task here is to build zlib, a general-purpose compression library. This will
-test the knowledge you've built so far. The goal is for a static library `libzlib.a`
+test the knowledge you've built so far. The goal is for a static library `libz.a`
 to be built and installed to the prefix directory when you run `zig build`.
 
 Your first step should be to download the zlib sources from an *official source*.
@@ -19,6 +19,8 @@ out the following:
 
 Here's one for free: zlib has no external dependencies. The rest you must find out.
 
+To add a header directory, you want the `addIncludePath` method on your step.
+
 ## Testing
 
 Once you have a build of zlib, you'll need to test it. In this directory, you will find
@@ -26,7 +28,7 @@ two files `test.c` and `test.z`. `test.c` is a program which will extract the fi
 into a plaintext file `test`. To test whether your library works, you can run the following
 command:
 
-  zig run test.c zig-out/lib/libzlib.a -I path/to/zlib -lc
+  zig run test.c zig-out/lib/libz.a -I path/to/zlib -lc
 
 If all is well, you should see a file `test` with readable contents. You just built your
 first real-world library using the Zig build system!

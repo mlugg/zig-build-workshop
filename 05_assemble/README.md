@@ -34,7 +34,9 @@ add further arguments, which can be based on `LazyPath`. The methods you'll need
 
 The command you're trying to construct looks like this:
 
-  nasm -f elf64 -o <out file> <in file>
+```
+nasm -f elf64 -o <out file> <in file>
+```
 
 If you're using macOS, replace `elf64` with `macho64`. On Windows, replace with `win64`.
 
