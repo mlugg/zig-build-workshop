@@ -9,7 +9,7 @@ This will generate a few files:
 * `build.zig.zon` -- not relevant for now, but will be useful later on when we look at package management!
 
 Create a C source file (something like `main.c` or `hello.c`) which contains a Hello World implementation.
-If you'd prefer to just use an existing one, an implementation exists in `../resources/01_hello.c`.
+If you'd prefer to just use an existing one, an implementation exists in `../solutions/01/hello.c`.
 
 Edit your generated `build.zig` script to compile your C program into a binary. You should be able to run
 `zig build` and get a working Hello World binary.

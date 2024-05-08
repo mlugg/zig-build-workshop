@@ -28,7 +28,9 @@ two files `test.c` and `test.z`. `test.c` is a program which will extract the fi
 into a plaintext file `test`. To test whether your library works, you can run the following
 command:
 
-  zig run test.c zig-out/lib/libz.a -I path/to/zlib -lc
+```
+zig run test.c zig-out/lib/libz.a -I path/to/zlib -lc
+```
 
 If all is well, you should see a file `test` with readable contents. You just built your
 first real-world library using the Zig build system!

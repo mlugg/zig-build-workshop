@@ -1,0 +1,15 @@
+.{
+    .name = "nasm-test",
+    .version = "0.0.1",
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "test.c",
+        "test.asm",
+    },
+    .dependencies = .{
+        .nasm = .{
+            .path = "../06",
+        },
+    },
+}
