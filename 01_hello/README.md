@@ -11,7 +11,10 @@ This will generate a few files:
 Create a C source file (something like `main.c` or `hello.c`) which contains a Hello World implementation.
 If you'd prefer to just use an existing one, an implementation exists in `../solutions/01/hello.c`.
 
-Edit your generated `build.zig` script to compile your C program into a binary. You should be able to run
-`zig build` and get a working Hello World binary.
+Edit your generated `build.zig` script to compile your C program into a binary. A C source file can be
+added to a "compile step" using the `addCSourceFile` method. Don't be afraid to use the Zig standard
+library documentation to your advantage! You can see it just by running `zig std`.
+
+After completing this task, you should be able to run `zig build` and get a working Hello World binary.
 
 If you get stuck, take a look at `hint.md`!

@@ -5,7 +5,7 @@ First, we'll use `addStaticLibrary` to make a step that builds a static library
 from `lib.c`, by using `addCSourceFile` as before. Also, make sure to call
 `linkLibC`, since the library uses libc.
 
-By default, Zig will not put this binary in your "prefix" directory (`zig-out` by
+By default, Zig will not put this library in your "prefix" directory (`zig-out` by
 default). The result of a step is only placed here if you use `installArtifact`.
 You could use that here, but we actually don't need to: the static library is a
 detail of the compilation, and so not something we need to copy to the prefix!

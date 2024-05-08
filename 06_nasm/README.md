@@ -13,9 +13,10 @@ okay if you need to ask for help with this one!
 Something that NASM needs which zlib did not is an automatically-generated config
 header. It's quite common that C codebases will perform feature detection and
 generate a header defining which libc/POSIX features the target supports, whether
-debug features should be enabled, etc. The Zig build system gives us a nice way to
-generate these headers with fixed values, but first, we need to figure out what the
-values should be!
+debug features should be enabled, etc. Zig packages do not typically need to do
+feature detection, because Zig ships with Clang, so we can assume a particular
+feature set. The Zig build system gives us a nice way to generate these headers
+with fixed values, but first, we need to figure out what the values should be!
 
 NASM uses GNU autoconf to generate its `config.h` file. We can use the official build
 system to look at the results and use those as a base for our generated config header.
@@ -63,10 +64,8 @@ the values from this header.
 After generating a config header, you can make it accessible to `Compile` steps using their
 `addConfigHeader` method with the step you just created.
 
-Hopefully that'll give you enough information to package NASM. If you get stuck, feel free to
-ask for help. You can actually find a copy of NASM packaged using the Zig build system at
-https://github.com/andrewrk/nasm/blob/master/build.zig, and you're welcome to use that as a
-reference if you'd like, but do your best to figure things out without it!
+Hopefully that'll give you enough information to package NASM. If you get stuck, as always,
+feel free to ask for help!
 
 Once you're done, you can just try running `zig-out/bin/nasm -h`. If you get a help menu, you
 probably did everything right!
