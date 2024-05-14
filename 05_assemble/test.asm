@@ -1,4 +1,7 @@
 section .data
 
 global str
-str: db "Hello, World!", 0
+global _str
+str:
+_str:
+db "Hello, World!", 0
